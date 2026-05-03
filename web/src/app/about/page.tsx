@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { CheckCircle2, Phone, Users, Lightbulb, HeartHandshake, ShieldCheck } from "lucide-react";
 
 const pillars = [
@@ -53,14 +52,12 @@ export default function AboutPage() {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
-                <Button asChild className="bg-[#1B3A6B] hover:bg-[#152d55] text-white">
-                  <Link href="/quote">Request a Quote</Link>
-                </Button>
-                <Button asChild variant="outline" className="border-[#1B3A6B] text-[#1B3A6B] hover:bg-[#1B3A6B] hover:text-white">
-                  <a href="tel:+14842135355" className="flex items-center gap-2">
-                    <Phone className="h-4 w-4" /> (484) 213-5355
-                  </a>
-                </Button>
+                <Link href="/quote" className="inline-block bg-[#1B3A6B] hover:bg-[#152d55] text-white font-semibold px-6 py-2.5 rounded-lg transition-colors">
+                  Request a Quote
+                </Link>
+                <a href="tel:+14842135355" className="inline-flex items-center gap-2 border border-[#1B3A6B] text-[#1B3A6B] hover:bg-[#1B3A6B] hover:text-white font-semibold px-6 py-2.5 rounded-lg transition-all">
+                  <Phone className="h-4 w-4" /> (484) 213-5355
+                </a>
               </div>
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">

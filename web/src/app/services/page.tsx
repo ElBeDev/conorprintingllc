@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Phone } from "lucide-react";
@@ -97,9 +96,9 @@ export default function ServicesPage() {
               <Phone className="h-5 w-5" />
               (484) 213-5355
             </a>
-            <Button asChild size="lg" className="bg-[#1B3A6B] hover:bg-[#152d55] text-white font-semibold px-8">
-              <Link href="/quote">Request a Quote Online</Link>
-            </Button>
+            <Link href="/quote" className="inline-block bg-[#1B3A6B] hover:bg-[#152d55] text-white font-semibold px-8 py-3 rounded-lg text-lg transition-colors">
+              Request a Quote Online
+            </Link>
           </div>
         </div>
       </section>

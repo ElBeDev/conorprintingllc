@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView, AnimatePresence, type Variants } from "framer-motion";
 import {
   CheckCircle2,
   Phone,
@@ -16,23 +16,23 @@ import {
 } from "lucide-react";
 
 // ── Animation helpers ───────────────────────────────────────────────
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 56 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 0.61, 0.36, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 0.61, 0.36, 1] as [number, number, number, number] } },
 };
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0.75 } },
 };
-const slideLeft = {
+const slideLeft: Variants = {
   hidden: { opacity: 0, x: -60 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.22, 0.61, 0.36, 1] } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.22, 0.61, 0.36, 1] as [number, number, number, number] } },
 };
-const slideRight = {
+const slideRight: Variants = {
   hidden: { opacity: 0, x: 60 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.22, 0.61, 0.36, 1] } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: [0.22, 0.61, 0.36, 1] as [number, number, number, number] } },
 };
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.11 } },
 };
@@ -43,7 +43,7 @@ function AnimIn({
   className = "",
 }: {
   children: React.ReactNode;
-  variants?: object;
+  variants?: Variants;
   className?: string;
 }) {
   const ref = useRef(null);
