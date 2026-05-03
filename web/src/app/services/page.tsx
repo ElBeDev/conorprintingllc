@@ -49,18 +49,18 @@ export default function ServicesPage() {
   return (
     <>
       {/* PAGE HERO */}
-      <section className="relative h-56 flex items-center overflow-hidden">
+      <section className="relative h-44 sm:h-56 flex items-end overflow-hidden">
         <Image src="/carousel-1.jpg" alt="Our Services" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-[#1B3A6B]/75" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8">
           <p className="text-[#fed000] text-xs font-semibold uppercase tracking-widest mb-1">Home / Services</p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white">Our Services</h1>
         </div>
       </section>
 
       {/* SERVICES BY CATEGORY */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 md:space-y-16">
           <div className="text-center">
             <p className="text-[#f04128] text-sm font-semibold uppercase tracking-widest mb-2">Our Services</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1B3A6B]">Professional Printing &amp; Custom Embroidery</h2>
@@ -71,7 +71,7 @@ export default function ServicesPage() {
               <div className="flex items-center gap-3 mb-6">
                 <Badge className={`${cat.color} text-white text-sm px-4 py-1.5`}>{cat.category}</Badge>
               </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
                 {cat.services.map((s) => (
                   <Card key={s.title} className="border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                     <CardContent className="p-5">
@@ -87,11 +87,11 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA QUOTE */}
-      <section className="py-16 bg-[#f04128]">
+      <section className="py-10 md:py-16 bg-[#f04128]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">Call Us For a Quote</h2>
           <p className="text-red-100 mb-6">We provide high-quality printing, embroidery, vinyl, and custom signage with professional craftsmanship you can trust.</p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <a href="tel:+14842135355" className="flex items-center gap-2 bg-white text-[#f04128] font-bold px-8 py-3 rounded-lg hover:bg-red-50 transition-colors text-lg">
               <Phone className="h-5 w-5" />
               (484) 213-5355
@@ -104,13 +104,13 @@ export default function ServicesPage() {
       </section>
 
       {/* KEY QUALITIES */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <p className="text-[#f04128] text-sm font-semibold uppercase tracking-widest mb-2">Why Choose Us</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1B3A6B]">Key Qualities That Define Our Printing Services</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {qualities.map((q) => (
               <div key={q.title} className="bg-white rounded-2xl p-6 shadow-md text-center">
                 <h3 className="font-bold text-[#1B3A6B] mb-1">{q.title}</h3>

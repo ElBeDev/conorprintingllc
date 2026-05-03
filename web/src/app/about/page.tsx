@@ -19,19 +19,19 @@ export default function AboutPage() {
   return (
     <>
       {/* PAGE HERO */}
-      <section className="relative h-56 flex items-center overflow-hidden">
+      <section className="relative h-44 sm:h-56 flex items-end overflow-hidden">
         <Image src="/carousel-2.jpg" alt="About CONOR Printing" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-[#1B3A6B]/75" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8">
           <p className="text-[#fed000] text-xs font-semibold uppercase tracking-widest mb-1">Home / About</p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white">About Us</h1>
         </div>
       </section>
 
       {/* MAIN ABOUT */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <p className="text-[#f04128] text-sm font-semibold uppercase tracking-widest mb-2">About Us</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1B3A6B] leading-tight mb-5">
@@ -68,13 +68,13 @@ export default function AboutPage() {
       </section>
 
       {/* PILLARS */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <p className="text-[#f04128] text-sm font-semibold uppercase tracking-widest mb-2">Our Values</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1B3A6B]">What We Stand For</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {pillars.map((p) => (
               <div key={p.title} className="bg-white rounded-2xl p-6 shadow-md text-center">
                 <div className="w-12 h-12 rounded-xl bg-[#1B3A6B]/10 flex items-center justify-center mx-auto mb-4">
@@ -89,13 +89,13 @@ export default function AboutPage() {
       </section>
 
       {/* WHAT MAKES US STAND OUT */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <p className="text-[#f04128] text-sm font-semibold uppercase tracking-widest mb-2">Our Expertise</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1B3A6B]">What Makes Our Company Stand Out</h2>
           </div>
-          <div className="grid sm:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
             {standout.map((s) => (
               <div key={s.title} className="text-center">
                 <div className="relative w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 shadow-lg">

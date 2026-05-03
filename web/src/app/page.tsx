@@ -200,14 +200,14 @@ export default function HomePage() {
         <div className="absolute top-1/3 left-1/4 w-150 h-150 bg-[#f04128]/8 rounded-full blur-[140px] pointer-events-none" />
         <div className="absolute bottom-1/4 right-1/3 w-125 h-125 bg-[#fed000]/7 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-10 sm:pb-16 w-full">
           {/* Main headline — two lines with overflow clip for reveal effect */}
           <div className="overflow-hidden mb-1">
             <motion.div
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.75, ease: [0.22, 0.61, 0.36, 1] }}
-              className="text-[clamp(3.2rem,9vw,7rem)] font-black text-white leading-[0.92] tracking-tighter"
+              className="text-[clamp(2.4rem,9vw,7rem)] font-black text-white leading-[0.92] tracking-tighter"
             >
               PRINTING &amp;
             </motion.div>
@@ -217,7 +217,7 @@ export default function HomePage() {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.75, delay: 0.12, ease: [0.22, 0.61, 0.36, 1] }}
-              className="text-[clamp(3.2rem,9vw,7rem)] font-black leading-[0.92] tracking-tighter"
+              className="text-[clamp(2.4rem,9vw,7rem)] font-black leading-[0.92] tracking-tighter"
               style={{ WebkitTextStroke: "2px #fed000", color: "transparent" }}
             >
               EMBROIDERY
@@ -239,18 +239,18 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="flex flex-wrap gap-4 mb-16"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-16"
           >
             <Link
               href="/quote"
-              className="group glow-red inline-flex items-center gap-2 bg-[#f04128] hover:bg-[#f04128] text-white font-black px-8 py-4 rounded-full text-base transition-all duration-300"
+              className="group glow-red inline-flex items-center justify-center gap-2 bg-[#f04128] hover:bg-[#f04128] text-white font-black px-8 py-4 rounded-full text-base transition-all duration-300 w-full sm:w-auto"
             >
               Get Free Quote
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="tel:+14842135355"
-              className="inline-flex items-center gap-2 border border-white/22 text-white/75 hover:text-white font-semibold px-8 py-4 rounded-full text-base hover:border-white/45 hover:bg-white/5 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 border border-white/22 text-white/75 hover:text-white font-semibold px-8 py-4 rounded-full text-base hover:border-white/45 hover:bg-white/5 transition-all duration-300 w-full sm:w-auto"
             >
               <Phone className="h-4 w-4" />
               (484) 213-5355
@@ -262,7 +262,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="flex flex-wrap gap-8 sm:gap-12 pt-8 border-t border-white/10"
+            className="grid grid-cols-2 sm:flex sm:flex-wrap gap-y-5 gap-x-8 sm:gap-12 pt-8 border-t border-white/10"
           >
             {[
               ["6+", "Years Experience"],
@@ -322,7 +322,7 @@ export default function HomePage() {
       {/* ╔══════════════════════════════════════╗
           ║  ABOUT                               ║
           ╚══════════════════════════════════════╝ */}
-      <section className="py-28 bg-white overflow-hidden">
+      <section className="py-14 md:py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image side */}
@@ -332,11 +332,11 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-linear-to-t from-[#1B3A6B]/40 to-transparent" />
               </div>
               {/* Floating badges */}
-              <div className="absolute -bottom-5 -right-5 bg-[#f04128] rounded-2xl px-5 py-4 shadow-xl shadow-red-500/30">
+              <div className="absolute bottom-3 -right-2 sm:-bottom-5 sm:-right-5 bg-[#f04128] rounded-2xl px-4 py-3 sm:px-5 sm:py-4 shadow-xl shadow-red-500/30">
                 <div className="text-4xl font-black text-white leading-none">6+</div>
                 <div className="text-[10px] text-red-200 uppercase tracking-widest mt-0.5">Years in Business</div>
               </div>
-              <div className="absolute -top-5 -left-5 bg-[#1B3A6B] rounded-2xl px-4 py-3 shadow-xl shadow-blue-900/30">
+              <div className="absolute top-3 -left-2 sm:-top-5 sm:-left-5 bg-[#1B3A6B] rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-xl shadow-blue-900/30">
                 <div className="text-2xl font-black text-[#fed000] leading-none">500+</div>
                 <div className="text-[10px] text-blue-200 uppercase tracking-widest mt-0.5">Happy Clients</div>
               </div>
@@ -389,9 +389,9 @@ export default function HomePage() {
       {/* ╔══════════════════════════════════════╗
           ║  SERVICES (DARK)                     ║
           ╚══════════════════════════════════════╝ */}
-      <section className="py-28 bg-[#04080F]">
+      <section className="py-14 md:py-28 bg-[#04080F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimIn variants={fadeIn} className="text-center mb-16">
+          <AnimIn variants={fadeIn} className="text-center mb-10 md:mb-16">
             <p className="text-[#f04128] text-[11px] font-black uppercase tracking-[0.3em] mb-3">
               What We Do
             </p>
@@ -401,7 +401,7 @@ export default function HomePage() {
             </h2>
           </AnimIn>
 
-          <StaggerIn className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <StaggerIn className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
             {services.map((s) => (
               <motion.div
                 key={s.title}
@@ -460,9 +460,9 @@ export default function HomePage() {
       {/* ╔══════════════════════════════════════╗
           ║  WHY CHOOSE US                       ║
           ╚══════════════════════════════════════╝ */}
-      <section className="py-28 bg-gray-50/80">
+      <section className="py-14 md:py-28 bg-gray-50/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimIn variants={fadeIn} className="text-center mb-16">
+          <AnimIn variants={fadeIn} className="text-center mb-10 md:mb-16">
             <p className="text-[#f04128] text-[11px] font-black uppercase tracking-[0.3em] mb-3">
               Why CONOR?
             </p>
@@ -493,7 +493,7 @@ export default function HomePage() {
       {/* ╔══════════════════════════════════════╗
           ║  GALLERY PREVIEW (NAVY)              ║
           ╚══════════════════════════════════════╝ */}
-      <section className="py-28 bg-[#1B3A6B] overflow-hidden">
+      <section className="py-14 md:py-28 bg-[#1B3A6B] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
             <AnimIn>
@@ -540,7 +540,7 @@ export default function HomePage() {
       {/* ╔══════════════════════════════════════╗
           ║  FINAL CTA (DARK + GLOW)             ║
           ╚══════════════════════════════════════╝ */}
-      <section className="relative py-36 overflow-hidden bg-[#04080F]">
+      <section className="relative py-20 md:py-36 overflow-hidden bg-[#04080F]">
         {/* Background glow */}
         <div className="absolute inset-0 bg-linear-to-br from-[#f04128]/12 via-transparent to-[#fed000]/8 pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-[#1B3A6B]/35 rounded-full blur-[130px] pointer-events-none" />
@@ -550,11 +550,11 @@ export default function HomePage() {
             <p className="text-[#fed000] text-[11px] font-black uppercase tracking-[0.3em] mb-6">
               Ready to Start?
             </p>
-            <h2 className="text-5xl sm:text-6xl lg:text-[5.5rem] font-black text-white leading-[0.95] tracking-tight mb-4">
+            <h2 className="text-4xl sm:text-5xl lg:text-[5.5rem] font-black text-white leading-[0.95] tracking-tight mb-4">
               Let&apos;s Build
               <span className="block text-[#fed000]">Your Brand</span>
             </h2>
-            <p className="text-white/40 text-3xl sm:text-4xl font-bold mb-8">together.</p>
+            <p className="text-white/40 text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">together.</p>
             <p className="text-white/45 text-base max-w-lg mx-auto mb-10 leading-relaxed">
               From concept to delivery — we handle everything. Get a free,
               personalized quote and see what CONOR Printing can do for you.
@@ -566,7 +566,7 @@ export default function HomePage() {
               Get Free Quote
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <div className="mt-10 flex flex-wrap justify-center gap-6 sm:gap-10">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-10">
               <a
                 href="tel:+14842135355"
                 className="text-white/45 hover:text-white/80 transition-colors text-sm font-medium"

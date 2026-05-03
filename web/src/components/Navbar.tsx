@@ -38,7 +38,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-16 sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
@@ -46,7 +46,7 @@ export default function Navbar() {
               alt="CONOR Printing LLC"
               width={280}
               height={100}
-              className="h-20 w-auto transition-all duration-300"
+              className="h-10 sm:h-20 w-auto transition-all duration-300"
               priority
             />
           </Link>

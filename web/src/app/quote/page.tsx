@@ -6,18 +6,18 @@ export default function QuotePage() {
   return (
     <>
       {/* PAGE HERO */}
-      <section className="relative h-56 flex items-center overflow-hidden">
+      <section className="relative h-44 sm:h-56 flex items-end overflow-hidden">
         <Image src="/carousel-2.jpg" alt="Free Quote" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-[#1B3A6B]/75" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 sm:pb-8">
           <p className="text-[#fed000] text-xs font-semibold uppercase tracking-widest mb-1">Home / Free Quote</p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white">Free Quote</h1>
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <p className="text-[#f04128] text-sm font-semibold uppercase tracking-widest mb-2">Request a Quote</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#1B3A6B]">Need a Free Quote? Please Feel Free to Contact Us</h2>
           </div>

@@ -30,7 +30,7 @@ export default function Footer() {
               alt="CONOR Printing LLC"
               width={280}
               height={100}
-              className="h-20 w-auto brightness-0 invert"
+              className="h-12 sm:h-16 w-auto brightness-0 invert"
             />
             <p className="text-sm text-blue-100 leading-relaxed">
               With over 6 years of experience, CONOR Printing LLC provides top-quality printing and embroidery services. We turn your ideas into professional branding solutions.
